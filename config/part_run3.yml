@@ -1,0 +1,125 @@
+bins_pt:
+- 10
+- 25
+- 30
+- 35
+- 40
+- 45
+- 50
+- 60
+- 75
+- 100
+- 125
+- 150
+- 175
+- 200
+- 250
+- 300
+- 400
+- 500
+- 600
+- 2001
+
+bins_eta:
+- -2.5
+- -2.0
+- -1.5
+- -1.0
+- -0.5
+- 0.0
+- 0.5
+- 1
+- 1.5
+- 2.0
+- 2.51
+
+treename:
+  "deepntuplizer/tree"
+
+global_features:
+- "jet_pt"
+- "jet_eta"
+- "n_Cpfcand"
+- "n_Npfcand"
+- "nsv"
+- "npv"
+- "TagVarCSV_trackSumJetEtRatio"
+- "TagVarCSV_trackSumJetDeltaR"
+- "TagVarCSV_vertexCategory"
+- "TagVarCSV_trackSip2dValAboveCharm"
+- "TagVarCSV_trackSip2dSigAboveCharm"
+- "TagVarCSV_trackSip3dValAboveCharm"
+- "TagVarCSV_trackSip3dSigAboveCharm"
+- "TagVarCSV_jetNSelectedTracks"
+- "TagVarCSV_jetNTracksEtaRel"
+
+cpf_candidates:
+- "Cpfcan_BtagPf_trackEtaRel"
+- "Cpfcan_BtagPf_trackPtRel"
+- "Cpfcan_BtagPf_trackPPar"
+- "Cpfcan_BtagPf_trackDeltaR"
+- "Cpfcan_BtagPf_trackPParRatio"
+- "Cpfcan_BtagPf_trackSip2dVal"
+- "Cpfcan_BtagPf_trackSip2dSig"
+- "Cpfcan_BtagPf_trackSip3dVal"
+- "Cpfcan_BtagPf_trackSip3dSig"
+- "Cpfcan_BtagPf_trackJetDistVal"
+- "Cpfcan_ptrel"
+- "Cpfcan_drminsv"
+- "Cpfcan_VTX_ass"
+- "Cpfcan_puppiw"
+- "Cpfcan_chi2"
+- "Cpfcan_quality"
+- "Cpfcan_pt"
+- "Cpfcan_eta"
+- "Cpfcan_phi"
+- "Cpfcan_e"
+
+npf_candidates:
+- "Npfcan_ptrel"
+- "Npfcan_deltaR"
+- "Npfcan_isGamma"
+- "Npfcan_HadFrac"
+- "Npfcan_drminsv"
+- "Npfcan_puppiw"
+- "Npfcan_pt"
+- "Npfcan_eta"
+- "Npfcan_phi"
+- "Npfcan_e"
+
+vtx_features:
+- "sv_deltaR"
+- "sv_mass"
+- "sv_ntracks"
+- "sv_chi2"
+- "sv_normchi2"
+- "sv_dxy"
+- "sv_dxysig"
+- "sv_d3d"
+- "sv_d3dsig"
+- "sv_costhetasvpv"
+- "sv_enratio"
+- "sv_pt"
+- "sv_eta"
+- "sv_phi"
+- "sv_e"
+
+n_cpf_candidates: 26
+n_npf_candidates: 25
+n_vtx_candidates: 5
+
+truths:
+- "isB"
+- "isBB"
+- "isGBB"
+- "isLeptonicB"
+- "isLeptonicB_C"
+- "isC"
+- "isCC"
+- "isGCC"
+- "isUD"
+- "isS"
+- "isG"
+
+reference_flavour:
+  "isB"

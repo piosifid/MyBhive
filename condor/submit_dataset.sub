@@ -1,0 +1,25 @@
+universe = vanilla
+executable = run_dataset.sh
+output = logs/dataset_ParT_$(ClusterId).out
+error = logs/dataset_ParT_$(ClusterId).err
+log = logs/dataset_ParT_$(ClusterId).log
+
+# Requesting optimal resources
+#request_cpus = 8
+request_memory = 32 GB
+#request_memory = 64 GB
+#request_gpus = 4
+#request_disk = 16 GB
+
+# GPU requirement (optional but recommended)
++JobFlavour = "testmatch"
+#+JobFlavour = "tomorrow"
+# or "tomorrow", "testmatch", etc.
+#+GPUJob = True
+
+# Make sure proxy and environment are passed
+getenv = True
+use_x509userproxy = True
+transfer_input_files = run_dataset.sh
+
+queue

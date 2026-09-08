@@ -1,0 +1,219 @@
+pt_min:
+  600
+
+pt_max:
+  1000
+
+bins_pt:
+- 8
+- 10
+- 14
+- 19
+- 26
+- 35
+- 47
+- 63
+- 85
+- 115
+- 155
+- 209
+- 282
+- 381
+- 514
+- 694
+- 937
+- 1265
+- 1708
+- 2000
+- 2500
+- 3000
+- 3500
+- 4000
+- 4500
+- 5000
+- 5500
+- 6000
+- 6500
+- 7000
+- 7500
+- 8000
+
+bins_eta:
+- -3.0
+- -2.5
+- -2.0
+- -1.5
+- -1.0
+- -0.5
+- 0.0
+- 0.5
+- 1.0
+- 1.5
+- 2.0
+- 2.5
+- 3.0
+
+treename:
+  "deepntuplizer/tree"
+
+global_features:
+- "jet_pt"
+- "jet_eta"
+- "jet_phi"
+- "jet_genmatch_pt"
+- "jet_genmatch_eta"
+- "jet_genmatch_phi"
+- "jet_genmatch_wnu_pt"
+- "jet_genmatch_wnu_eta"
+- "jet_genmatch_wnu_phi"
+- "gen_pt_WithNu"
+- "gen_pt"
+
+cpf_candidates:
+- "Cpfcan_BtagPf_trackEtaRel"
+- "Cpfcan_BtagPf_trackPtRel"
+- "Cpfcan_BtagPf_trackPPar"
+- "Cpfcan_BtagPf_trackDeltaR"
+- "Cpfcan_BtagPf_trackPParRatio"
+- "Cpfcan_BtagPf_trackSip2dVal"
+- "Cpfcan_BtagPf_trackSip2dSig"
+- "Cpfcan_BtagPf_trackSip3dVal"
+- "Cpfcan_BtagPf_trackSip3dSig"
+- "Cpfcan_BtagPf_trackJetDistVal"
+- "Cpfcan_ptrel"
+- "Cpfcan_qdotp"
+- "Cpfcan_qoverp"
+- "Cpfcan_drminsv"
+- "Cpfcan_distminsv2"
+- "Cpfcan_VTX_ass"
+- "Cpfcan_puppiw"
+- "Cpfcan_chi2"
+- "Cpfcan_quality"
+- "Cpfcan_pt"
+- "Cpfcan_charge"
+- "Cpfcan_dz"
+- "Cpfcan_BtagPf_trackDecayLen"
+- "Cpfcan_HadFrac"
+- "Cpfcan_CaloFrac"
+- "Cpfcan_pdgID"
+- "Cpfcan_lostInnerHits"
+- "Cpfcan_numberOfPixelHits"
+- "Cpfcan_numberOfStripHits"
+- "Cpfcan_tau_signal"
+- "Cpfcan_px"
+- "Cpfcan_py"
+- "Cpfcan_pz"
+- "Cpfcan_e"
+
+lt_candidates:
+- "LT_BtagPf_trackEtaRel"
+- "LT_BtagPf_trackPtRel"
+- "LT_BtagPf_trackPPar"
+- "LT_BtagPf_trackDeltaR"
+- "LT_BtagPf_trackPParRatio"
+- "LT_BtagPf_trackSip2dVal"
+- "LT_BtagPf_trackSip2dSig"
+- "LT_BtagPf_trackSip3dVal"
+- "LT_BtagPf_trackSip3dSig"
+- "LT_BtagPf_trackJetDistVal"
+- "LT_drminsv"
+- "LT_puppiw"
+- "LT_chi2"
+- "LT_quality"
+- "LT_charge"
+- "LT_dz"
+- "LT_BtagPf_trackDecayLen"
+- "LT_HadFrac"
+- "LT_CaloFrac"
+- "LT_pdgID"
+- "LT_lostInnerHits"
+- "LT_numberOfPixelHits"
+- "LT_numberOfStripHits"
+- "LT_pt"
+- "LT_px"
+- "LT_py"
+- "LT_pz"
+- "LT_e"
+
+npf_candidates:
+- "Npfcan_pt"
+- "Npfcan_ptrel"
+- "Npfcan_etarel"
+- "Npfcan_phirel"
+- "Npfcan_deltaR"
+- "Npfcan_isGamma"
+- "Npfcan_HadFrac"
+- "Npfcan_drminsv"
+- "Npfcan_puppiw"
+- "Npfcan_tau_signal"
+- "Npfcan_px"
+- "Npfcan_py"
+- "Npfcan_pz"
+- "Npfcan_e"
+
+vtx_features:
+- "sv_pt"
+- "sv_deltaR"
+- "sv_mass"
+- "sv_ntracks"
+- "sv_etarel"
+- "sv_phirel"
+- "sv_chi2"
+- "sv_normchi2"
+- "sv_dxy"
+- "sv_dxysig"
+- "sv_d3d"
+- "sv_d3dsig"
+- "sv_costhetasvpv"
+- "sv_enratio"
+- "sv_px"
+- "sv_py"
+- "sv_pz"
+- "sv_e"
+
+pair_candidates:
+- "pair_pca_distpv"
+- "pair_pca_distance"
+- "pair_dotprod1"
+- "pair_dotprod2"
+- "pair_pca_dist1"
+- "pair_pca_dist2"
+- "pair_pca_jetAxis_dist"
+- "pair_pca_jetAxis_dotprod"
+- "pair_pca_jetAxis_dEta"
+- "pair_pca_jetAxis_dPhi"
+
+# n_cpf_candidates: 25
+n_cpf_candidates: 26
+n_lt_candidates: 6
+# n_npf_candidates: 20
+n_npf_candidates: 25
+n_vtx_candidates: 5
+n_pair_candidates: 300
+
+truths:
+- "isB"
+- "isBB"
+- "isGBB"
+- "isLeptonicB"
+- "isLeptonicB_C"
+- "isC"
+- "isCC"
+- "isGCC"
+- "isU"
+- "isD"
+- "isS"
+- "isG"
+- "isTaup1h0p_"
+- "isTaup1h1p_"
+- "isTaup1h2p_"
+- "isTaup3h0p_"
+- "isTaup3h1p_"
+- "isTaum1h0p_"
+- "isTaum1h1p_"
+- "isTaum1h2p_"
+- "isTaum3h0p_"
+- "isTaum3h1p_"
+
+reference_flavour:
+  "isB"

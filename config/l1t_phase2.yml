@@ -1,0 +1,136 @@
+# bins_pt:
+# - 15
+# - 30
+# - 40
+# - 50
+# - 60
+# - 75
+# - 100
+# - 150
+# - 250
+# - 300
+# - 500
+# - 9999
+
+# bins_eta:
+# - -2.5
+# - -2.0
+# - -1.5
+# - -1.0
+# - -0.5
+# - 0.5
+# - 1
+# - 1.5
+# - 2.0
+# - 2.4
+
+bins_pt:
+  - 15
+  - 100
+  - 9999
+
+bins_eta:
+  - -2.4
+  - 0
+  - 2.4
+
+treename:
+  "jetntuple/Jets"
+
+processor:
+  "L1PFCandidateAndVertexProcessing"
+
+global_features:
+- "jet_pt"
+- "jet_eta"
+- "jet_phi"
+- "jet_mass"
+- "jet_energy"
+- "jet_npfcand"
+
+cpf_candidates:
+- "jet_pfcand_pt_rel"
+- "jet_pfcand_deta"
+- "jet_pfcand_dphi"
+- "jet_pfcand_charge"
+- "jet_pfcand_id"
+- "jet_pfcand_track_vx"
+- "jet_pfcand_track_vy"
+- "jet_pfcand_track_vz"
+
+truths:
+  label_b: 
+    # every item is connected with an AND!
+    - jet_tauflav:
+      - 0
+    - jet_genmatch_hflav:
+      - 5
+    - jet_elflav:
+      - 0
+    - jet_muflav:
+      - 0
+  label_uds:
+    - jet_elflav:
+      - 0
+    - jet_muflav:
+      - 0
+    - jet_tauflav:
+      - 0
+    - jet_genmatch_hflav: 
+      - 0
+    - jet_genmatch_pflav: 
+       # every item is connected with an OR!
+       - -3
+       - -2
+       - -1
+       - 0
+       - 1
+       - 2
+       - 3
+  label_g:
+    - jet_tauflav:
+      - 0
+    - jet_genmatch_hflav:
+      - 0
+    - jet_genmatch_pflav:
+      - 21
+    - jet_elflav:
+      - 0
+    - jet_muflav:
+      - 0
+  # label_tau:
+  #   - jet_tauflav:
+  #     - 1
+  #   - jet_elflav:
+  #     - 0
+  #   - jet_muflav:
+  #     - 0
+
+reference_flavour:
+  "label_b"
+
+processes:
+- "TT"
+- "QCD"
+# - "ggHtt"
+# - "vbfHtt"
+
+n_cpf_candidates: 16
+n_npf_candidates: 0
+n_vtx_features: 0
+
+TT:
+ pt_min: 15
+ pt_max: 9999
+
+QCD:
+ pt_min: 15
+ pt_max: 9999
+
+ggHtt:
+ pt_min: 15
+ pt_max: 9999
+
+vbfHtt:
+ pt_min: 15
+ pt_max: 9999

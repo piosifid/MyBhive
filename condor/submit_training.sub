@@ -1,0 +1,38 @@
+universe = vanilla
+executable = run_training.sh
+output = logs/training_ParT_$(ClusterId).out
+error = logs/training_ParT_$(ClusterId).err
+log = logs/training_ParT_$(ClusterId).log
+
+# Requesting optimal resources
+#request_memory = 48 GB
+#request_cpus = 20
+#request_cpus = 32
+request_cpus = 64
+#request_cpus = 16
+#request_memory = 64 GB
+request_memory = 128 GB
+#request_cpus = 8
+#request_memory = 32 GB
+request_gpus = 4
+#request_gpus = 3
+#request_gpus = 2
+#request_gpus = 1
+#request_disk = 16 GB
+
+# GPU requirement (optional but recommended)
+#+JobFlavour = "nextweek"
++JobFlavour = "testmatch"
+#+JobFlavour = "tomorrow"
+#+JobFlavour = "workday"
+#+JobFlavour = "microcentury"
+#+JobFlavour = "espresso"
+# or "tomorrow", "testmatch", etc.
++GPUJob = True
+
+# Make sure proxy and environment are passed
+getenv = True
+use_x509userproxy = True
+transfer_input_files = run_training.sh
+
+queue

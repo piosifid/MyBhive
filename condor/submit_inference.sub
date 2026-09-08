@@ -1,0 +1,32 @@
+universe = vanilla
+executable = run_inference.sh
+output = logs/inference_ParT_$(ClusterId).out
+error = logs/inference_ParT_$(ClusterId).err
+log = logs/inference_ParT_$(ClusterId).log
+#output = logs/inference_ParticleNet_$(ClusterId).out
+#error = logs/inference_ParticleNet_$(ClusterId).err
+#log = logs/inference_ParticleNet_$(ClusterId).log
+
+stream_output = True
+stream_error = True
+
+# Requesting optimal resources
+request_cpus = 8
+request_memory = 32 GB
+request_gpus = 4
+#request_cpus = 4
+#request_memory = 16 GB
+#request_gpus = 2
+
+# GPU requirement (optional but recommended)
++JobFlavour = "testmatch"
+#+JobFlavour = "tomorrow"
+# or "tomorrow", "testmatch", etc.
++GPUJob = True
+
+# Make sure proxy and environment are passed
+getenv = True
+use_x509userproxy = True
+transfer_input_files = run_inference.sh
+
+queue

@@ -1,0 +1,157 @@
+bins_pt:
+- 10
+- 25
+- 30
+- 35
+- 40
+- 45
+- 50
+- 60
+- 75
+- 100
+- 125
+- 150
+- 175
+- 200
+- 250
+- 300
+- 400
+- 500
+- 600
+- 2001
+
+bins_eta:
+- -2.5
+- -2.0
+- -1.5
+- -1.0
+- -0.5
+- 0.5
+- 1
+- 1.5
+- 2.0
+- 2.5
+
+treename:
+  "DeepJetNTupler/DeepJetvars"
+
+global_features:
+- "jet_pt"
+- "jet_pt_raw"
+- "jet_eta"
+- "jet_phi"
+- "jet_mass"
+- "jet_mass_raw"
+- "jet_energy"
+- "jet_chf"
+- "jet_nhf"
+- "jet_phf"
+- "jet_elf"
+- "jet_muf"
+- "jet_ncand"
+- "jet_nbhad"
+- "jet_nchad"
+cpf_candidates:
+- "jet_pfcand_pt"
+- "jet_pfcand_eta"
+- "jet_pfcand_phi"
+- "jet_pfcand_mass"
+- "jet_pfcand_energy"
+- "jet_pfcand_pt_log"
+- "jet_pfcand_energy_log"
+- "jet_pfcand_calofraction"
+- "jet_pfcand_hcalfraction"
+- "jet_pfcand_dxy"
+- "jet_pfcand_dxysig"
+- "jet_pfcand_dz"
+- "jet_pfcand_dzsig"
+- "jet_pfcand_pperp_ratio"
+- "jet_pfcand_ppara_ratio"
+- "jet_pfcand_deta"
+- "jet_pfcand_dphi"
+- "jet_pfcand_etarel"
+- "jet_pfcand_frompv"
+- "jet_pfcand_id"
+- "jet_pfcand_charge"
+- "jet_pfcand_track_qual"
+- "jet_pfcand_track_chi2"
+- "jet_pfcand_npixhits"
+- "jet_pfcand_nstriphits"
+- "jet_pfcand_nlostinnerhits"
+- "jet_pfcand_trackjet_d3d"
+- "jet_pfcand_trackjet_d3dsig"
+- "jet_pfcand_trackjet_dist"
+- "jet_pfcand_trackjet_decayL"
+vtx_features:
+- "jet_sv_ntracks"
+- "jet_sv_pt"
+- "jet_sv_pt_log"
+- "jet_sv_eta"
+- "jet_sv_phi"
+- "jet_sv_mass"
+- "jet_sv_energy"
+- "jet_sv_energy_log"
+- "jet_sv_deta"
+- "jet_sv_dphi"
+- "jet_sv_chi2"
+- "jet_sv_dxy"
+- "jet_sv_dxysig"
+- "jet_sv_d3d"
+- "jet_sv_d3dsig"
+truths:
+  label_b: 
+    # every item is connected with an AND!
+    - jet_tauflav:
+      - 0
+    - jet_hflav:
+      - 5
+  label_c:
+    - jet_tauflav:
+      - 0
+    - jet_hflav:
+      - 4
+  label_uds:
+    - jet_tauflav:
+      - 0
+    - jet_hflav: 
+      - 0
+    - jet_pflav: 
+       # every item is connected with an OR!
+       - -3
+       - -2
+       - -1
+       - 0
+       - 1
+       - 2
+       - 3
+  label_g:
+    - jet_tauflav:
+      - 0
+    - jet_hflav:
+      - 0
+    - jet_pflav:
+      - 21
+  label_taup:
+    - jet_tauflav:
+      - 1
+    - jet_elflav:
+      - 0
+    - jet_taucharge:
+      - 1
+  label_taum:
+    - jet_tauflav:
+      - 1
+    - jet_elflav:
+      - 0
+    - jet_taucharge:
+      - -1
+# - "jet_hflav"
+# - "jet_pflav"
+# - "jet_tauflav"
+# - "jet_taudecaymode"
+# - "jet_muflav"
+# - "jet_elflav"
+# - "jet_lepflav"
+
+reference_flavour:
+  "label_b"

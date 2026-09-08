@@ -1,0 +1,145 @@
+bins_pt:
+- 10
+- 25
+- 30
+- 35
+- 40
+- 45
+- 50
+- 60
+- 75
+- 100
+- 125
+- 150
+- 175
+- 200
+- 250
+- 300
+- 400
+- 500
+- 600
+- 2001
+
+bins_eta:
+- -2.5
+- -2.0
+- -1.5
+- -1.0
+- -0.5
+- 0.5
+- 1
+- 1.5
+- 2.0
+- 2.51
+
+treename:
+  "deepntuplizer/tree"
+
+cpf_points:
+  - "Cpfcan_etarel"  # Corresponding to jet_pfcand_deta
+  - "Cpfcan_phirel"  # Corresponding to jet_pfcand_dphi
+
+vtx_points:
+  - "sv_etarel"  # Corresponding to jet_sv_deta
+  - "sv_phirel"  # Corresponding to jet_sv_dphi
+
+global_features:
+  - "jet_pt"         # Corresponding to jet_pt
+  # No match found for jet_pt_raw
+  - "jet_eta"        # Corresponding to jet_eta
+  - "jet_phi"        # Corresponding to jet_phi
+  - "jet_mass"       # Corresponding to jet_mass
+  # No match found for jet_mass_raw
+  - "jet_energy"     # Corresponding to jet_energy
+  # No match found for jet_chf
+  # No match found for jet_nhf
+  # No match found for jet_phf
+  # No match found for jet_elf
+  # No match found for jet_muf
+  # No match found for jet_ncand
+  # No match found for jet_nbhad
+  # No match found for jet_nchad
+
+cpf_candidates:
+  - "Cpfcan_pt"            # Corresponding to jet_pfcand_pt
+  - "Cpfcan_eta"           # Corresponding to jet_pfcand_eta
+  - "Cpfcan_phi"           # Corresponding to jet_pfcand_phi
+  # No match found for jet_pfcand_mass
+  # No match found for jet_pfcand_energy
+  # No match found for jet_pfcand_pt_log
+  # No match found for jet_pfcand_energy_log
+  - "Cpfcan_CaloFrac"      # Corresponding to jet_pfcand_calofraction
+  - "Cpfcan_HadFrac"       # Corresponding to jet_pfcand_hcalfraction
+  - "Cpfcan_dxy"           # Corresponding to jet_pfcand_dxy
+  - "Cpfcan_dxysig"        # Corresponding to jet_pfcand_dxysig
+  - "Cpfcan_dz"            # Corresponding to jet_pfcand_dz
+  # No match found for jet_pfcand_dzsig
+  # No match found for jet_pfcand_pperp_ratio
+  - "Cpfcan_trackPParRatio" # Corresponding to jet_pfcand_ppara_ratio
+  - "Cpfcan_phirel"        # Corresponding to jet_pfcand_dphi
+  - "Cpfcan_etarel"        # Corresponding to jet_pfcand_etarel
+  - "Cpfcan_fromPV"        # Corresponding to jet_pfcand_frompv
+  # No match found for jet_pfcand_id
+  - "Cpfcan_charge"        # Corresponding to jet_pfcand_charge
+  - "Cpfcan_quality"       # Corresponding to jet_pfcand_track_qual
+  - "Cpfcan_chi2"          # Corresponding to jet_pfcand_track_chi2
+  - "Cpfcan_numberOfPixelHits" # Corresponding to jet_pfcand_npixhits
+  - "Cpfcan_numberOfStripHits" # Corresponding to jet_pfcand_nstriphits
+  - "Cpfcan_lostInnerHits" # Corresponding to jet_pfcand_nlostinnerhits
+  # No match found for jet_pfcand_trackjet_d3d
+  # No match found for jet_pfcand_trackjet_d3dsig
+  # No match found for jet_pfcand_trackjet_dist
+  # No match found for jet_pfcand_trackjet_decayL
+
+vtx_features:
+  - "sv_ntracks"       # Corresponding to jet_sv_ntracks
+  - "sv_pt"            # Corresponding to jet_sv_pt
+  # No match found for jet_sv_pt_log
+  - "sv_eta"           # Corresponding to jet_sv_eta
+  - "sv_phi"           # Corresponding to jet_sv_phi
+  - "sv_mass"          # Corresponding to jet_sv_mass
+  - "sv_e"             # Corresponding to jet_sv_energy
+  # No match found for jet_sv_energy_log
+  - "sv_etarel"        # Corresponding to jet_sv_deta
+  - "sv_phirel"        # Corresponding to jet_sv_dphi
+  - "sv_chi2"          # Corresponding to jet_sv_chi2
+  - "sv_dxy"           # Corresponding to jet_sv_dxy
+  - "sv_dxysig"        # Corresponding to jet_sv_dxysig
+  - "sv_d3d"           # Corresponding to jet_sv_d3d
+  - "sv_d3dsig"        # Corresponding to jet_sv_d3dsig
+
+truths:
+- "isB"
+- "isBB"
+- "isGBB"
+- "isLeptonicB"
+- "isLeptonicB_C"
+- "isC"
+- "isCC"
+- "isGCC"
+- "isU"
+- "isD"
+- "isS"
+- "isG"
+- "isTaum1h0p_"
+- "isTaum1h1p_"
+- "isTaum1h2p_"
+- "isTaum3h0p_"
+- "isTaum3h1p_"
+- "isTaup1h0p_"
+- "isTaup1h1p_"
+- "isTaup1h2p_"
+- "isTaup3h0p_"
+- "isTaup3h1p_"
+
+
+reference_flavour:
+  "isB"
+
+TT:
+ pt_min: 10
+ pt_max: 1000 
+
+QCD:
+ pt_min: 10
+ pt_max: 1000

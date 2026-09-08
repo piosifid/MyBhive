@@ -1,0 +1,154 @@
+bins_pt:
+- 0
+- 20
+- 40
+- 60
+- 80
+- 100
+- 120
+- 140
+- 160
+- 180
+- 200
+- 220
+- 240
+- 260
+- 280
+- 300
+
+bins_eta:
+- -2.5
+- -2.0
+- -1.5
+- -1.0
+- -0.5
+- 0.5
+- 1
+- 1.5
+- 2.0
+- 2.5
+
+pt_key:
+  "MC_higgs_pt"
+
+eta_key:
+  "MC_higgs_eta"
+
+treename:
+  "tree"
+
+processor:
+  "PairedTaggerProcessor"
+  
+processes:
+- "PAIReD_LL_CC_BB"
+#- "QCD"
+
+# selection:
+#   #(hmass<=500) & (((label_bb==1) & (gen_flav==255)) | ((label_cc==1) & (gen_flav==254)))
+
+# test_time_selection:
+#   #((label_bb==1) & (gen_flav==255)) | ((label_cc==1) & (gen_flav==254))
+#   (label_bb==label_bb)
+
+# preprocess:
+#   ### method: [manual, auto] - whether to use manually specified parameters for variable standardization
+#   method: manual
+#   ### data_fraction: fraction of events to use when calculating the mean/scale for the standardization
+#   data_fraction: null
+#   params: null
+
+# new_variables:
+#   ### [format] name: formula
+#   ### can use functions from `math`, `np` (numpy), and `awkward` in the expression
+#   part_mask: ak.ones_like(part_energy)
+#   part_pt_log: np.where(np.isnan(np.log(part_pt)), -1e3, np.log(part_pt))
+#   part_e_log: np.where(np.isnan(np.log(part_energy)), -1e3, np.log(part_energy))
+#   part_logptrel: np.where(np.isnan(np.log(part_pt/(jet1_pt+jet2_pt))), -1e3, np.log(part_pt/(jet1_pt+jet2_pt)))
+#   part_logerel: np.where(np.isnan(np.log(part_energy/(jet1_energy+jet2_energy))), -1e3, np.log(part_energy/(jet1_energy+jet2_energy)))
+#   sv_mask: ak.ones_like(sv_pt)
+
+
+global_features: #Which global features do I have?
+- "jet1_pt"
+- "jet1_eta"
+- "jet1_phi"
+- "jet1_energy"
+- "jet2_pt"
+- "jet2_eta"
+- "jet2_phi"
+- "jet2_energy"
+- "MC_higgs_pt"
+- "MC_higgs_eta"
+- "MC_gen_flav"
+- "includesIsoLepJet"
+# - "dijet_pt"
+# - "dijet_eta"
+# - "dijet_phi"
+# - "dijet_mass"
+# - "dijet_index"
+# - "MC_higgs_pt"
+# - "MC_higgs_eta"
+# - "MC_higgs_phi"
+# - "MC_higgs_mass"
+
+n_cpf_candidates: 128
+cpf_candidates: #len: N_pf auf 128 setzen
+- "part_pt"
+# - "part_pt_log"
+# - "part_e_log"
+# - "part_logptrel"
+# - "part_logerel"
+# - "part_deltaR1"
+# - "part_deltaR2"
+- "part_charge"
+#- "part_d0"     #muss erst created werden, also evtl rausnehmen
+- "part_d0err"
+- "part_d0val"
+# - "part_dz"
+- "part_dzerr"
+- "part_dzval"
+- "part_deta1"
+- "part_dphi1"
+- "part_deta2"
+- "part_dphi2"
+- "part_px"
+- "part_py"
+- "part_pz"
+- "part_energy"
+- "part_puppiweight"
+
+n_npf_candidates: 128
+
+n_vtx_features: 10
+vtx_features: # len: N_sv auf 10 setzen
+- "sv_charge"
+- "sv_chi2"
+- "sv_dlen"
+- "sv_dlenSig"
+- "sv_dxy"
+- "sv_dxySig"
+- "sv_eta"
+- "sv_mass"
+- "sv_ndof"
+- "sv_ntracks"
+- "sv_pAngle"
+- "sv_phi"
+- "sv_pt"
+- "sv_x"
+- "sv_y"
+- "sv_z"
+- "sv_deta1"
+- "sv_deta2"
+- "sv_dphi1"
+- "sv_dphi2"
+
+
+truths:
+- "label_bb"
+- "label_cc"
+- "label_ll"
+
+
+reference_flavour:
+  "label_bb"

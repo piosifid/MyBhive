@@ -1,0 +1,45 @@
+name: b-hive
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - awkward=1.10
+  - black=24.3
+  - coffea=0.7
+  - fsspec-xrootd=0.2
+  - git=2.42
+  - hist=2.7
+  - ipython=8.22
+  - law=0.1
+  - luigi=3.5
+  - matplotlib=3.8
+  - mplhep=0.3
+  - notebook=7.1
+  - numpy=1.23
+  - onnx=1.14
+  - onnxruntime=1.17
+  - pandas=2.2
+  - pathlib=1.0
+  - pip=24
+  - psutil=5.9
+  - python=3.11
+  - pytorch=2.5.1
+  - pytorch-cuda=12.4
+  - rich=13.7
+  - scikit-learn=1.4
+  - scipy=1.12
+  #- torchaudio=2.2
+  #- torchvision=0.17
+  - tqdm=4.66
+  - typing=3.10
+  - uproot=4.3
+  - xrootd=5.5
+  - yaml=0.2
+  - yaml=0.2
+  - pip:
+      #- tensorflow==2.15
+      - termplotlib==0.3
+      #- tf_keras==2.15
+      #- QKeras==0.9
+      - setuptools=62.4.0

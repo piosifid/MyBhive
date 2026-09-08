@@ -1,0 +1,50 @@
+bins_pt:
+- 10
+- 25
+- 30
+- 35
+- 40
+- 45
+- 50
+- 60
+- 75
+- 100
+- 125
+- 150
+- 175
+- 200
+- 250
+- 300
+- 400
+- 500
+- 600
+- 2001
+
+bins_eta:
+- -2.5
+- -2.0
+- -1.5
+- -1.0
+- -0.5
+- 0.5
+- 1
+- 1.5
+- 2.0
+- 2.5
+
+n_cpf_candidates: 0
+n_lt_candidates: 0
+n_npf_candidates: 0
+n_vtx_candidates: 0
+
+processes:
+- "default"
+
+processor:
+  "LZ4Processing"
+
+dataset:
+  "LZ4Dataset"
+
+data_precision:
+  "float32"
