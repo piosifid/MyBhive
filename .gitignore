@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 condor/logs/
+logs/
+.law/
+condor/.sys.v#.*
+condor/piosifid.cc

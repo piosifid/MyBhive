@@ -1,0 +1,17 @@
+universe = vanilla
+executable = run_train_upart_piosifid.sh
+output = logs/train_upart_$(ClusterId).out
+error = logs/train_upart_$(ClusterId).err
+log = logs/train_upart_$(ClusterId).log
+
+request_memory = 16 GB
+request_cpus = 8
+request_gpus = 1
+
++JobFlavour = "testmatch"
++GPUJob = True
+
+getenv = False
+use_x509userproxy = False
+
+queue

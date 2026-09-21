@@ -1,0 +1,15 @@
+universe = vanilla
+executable = run_dataset_piosifid.sh
+output = logs/dataset_$(ClusterId).out
+error = logs/dataset_$(ClusterId).err
+log = logs/dataset_$(ClusterId).log
+
+request_memory = 8 GB
+request_cpus = 10
+
++JobFlavour = "testmatch"
+
+getenv = False
+use_x509userproxy = False
+
+queue
