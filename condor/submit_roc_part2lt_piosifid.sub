@@ -1,0 +1,17 @@
+universe = vanilla
+executable = run_roc_part2lt_piosifid.sh
+output = logs/roc_part2lt_$(ClusterId).out
+error = logs/roc_part2lt_$(ClusterId).err
+log = logs/roc_part2lt_$(ClusterId).log
+
+request_memory = 16 GB
+request_cpus = 8
+request_gpus = 1
+
++JobFlavour = "testmatch"
++GPUJob = True
+
+getenv = False
+use_x509userproxy = False
+
+queue

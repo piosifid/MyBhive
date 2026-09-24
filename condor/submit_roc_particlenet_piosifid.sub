@@ -1,0 +1,17 @@
+universe = vanilla
+executable = run_roc_particlenet_piosifid.sh
+output = logs/roc_particlenet_$(ClusterId).out
+error = logs/roc_particlenet_$(ClusterId).err
+log = logs/roc_particlenet_$(ClusterId).log
+
+request_memory = 16 GB
+request_cpus = 8
+request_gpus = 1
+
++JobFlavour = "testmatch"
++GPUJob = True
+
+getenv = False
+use_x509userproxy = False
+
+queue
