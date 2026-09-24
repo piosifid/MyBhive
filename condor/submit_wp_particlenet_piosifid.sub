@@ -1,0 +1,17 @@
+universe = vanilla
+executable = run_wp_particlenet_piosifid.sh
+output = logs/wp_particlenet_$(ClusterId).out
+error = logs/wp_particlenet_$(ClusterId).err
+log = logs/wp_particlenet_$(ClusterId).log
+
+request_memory = 16 GB
+request_cpus = 8
+request_gpus = 1
+
++JobFlavour = "testmatch"
++GPUJob = True
+
+getenv = False
+use_x509userproxy = False
+
+queue
