@@ -1,0 +1,17 @@
+universe = vanilla
+executable = run_roc_upart_flatpt_piosifid.sh
+output = logs/roc_upart_flatpt_$(ClusterId).out
+error = logs/roc_upart_flatpt_$(ClusterId).err
+log = logs/roc_upart_flatpt_$(ClusterId).log
+
+request_memory = 16 GB
+request_cpus = 8
+request_gpus = 1
+
++JobFlavour = "testmatch"
++GPUJob = True
+
+getenv = False
+use_x509userproxy = False
+
+queue
