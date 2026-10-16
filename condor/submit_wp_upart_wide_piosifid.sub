@@ -1,0 +1,17 @@
+universe = vanilla
+executable = run_wp_upart_wide_piosifid.sh
+output = logs/wp_upart_wide_$(ClusterId).out
+error = logs/wp_upart_wide_$(ClusterId).err
+log = logs/wp_upart_wide_$(ClusterId).log
+
+request_memory = 48 GB
+request_cpus = 8
+request_gpus = 1
+
++JobFlavour = "testmatch"
++GPUJob = True
+
+getenv = False
+use_x509userproxy = False
+
+queue
