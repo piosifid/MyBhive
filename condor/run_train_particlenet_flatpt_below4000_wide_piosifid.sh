@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+cd /eos/user/p/piosifid/MyBhive
+
+source /eos/user/u/uwillems/miniforge3/etc/profile.d/conda.sh
+conda activate b_hive
+
+export DATA_PATH="/eos/user/p/piosifid/b-hive-output/"
+source setup.sh
+
+mkdir -p logs
+law run TrainingTask --config part_run3_lt_below4000 --dataset-version dijet_full_plus_flatpt_below4000_wide --filelist filelists/dijet/train_val_samples_plus_flatpt.txt --training-version particleNet_dijet_flatpt_below4000_wide --model-name ParticleNet_InPro --epochs 40 --n-threads 8 --batch-size 256 > logs/train_particleNet_flatpt_below4000_wide_$(date +%Y%m%d_%H%M%S).log 2>&1
